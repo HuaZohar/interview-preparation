@@ -8,8 +8,6 @@ ConcurrentHashMap原理
 
 ArrayList原理
 
-
-
 注：自己总结的集合类
 
 
@@ -44,13 +42,24 @@ Spring有哪些核心组件，AOP(运用的场景：例如异常、权限控制�
 
 声明式事物的方式  
 
-事务的传播性，说说你是怎么配置声明式事务的 非常重要！！！！ 
+## 事务的传播性，说说你是怎么配置声明式事务的 非常重要！！！！ 
+
+
 
 我需要发送一封邮件，在spring刚完成初始化，在把这个邮件发出去，说出你的办法
 
-springmvc工作流程
+## springmvc工作流程
 
-Mybatis中的#{}和&的区别 防SQL注入非常 经常 常常 问！！！
+
+
+## Mybatis中的#{}和&的区别 防SQL注入非常 经常 常常 问！！！
+
+```
+#{}表示一个占位符号
+${}表示拼接SQL串
+
+name LIKE CONCAT('%',#{name},'%') 
+```
 
 
 
@@ -124,6 +133,14 @@ CAS操作的具体过程（加分）
 
 注：第二季面试总结
 
+# 高并发
+
+高并发处理方案
+
+分布式锁
+
+
+
 # 设计模式
 
 工厂模式的种类 
@@ -138,7 +155,15 @@ CAS操作的具体过程（加分）
 
 斐波那契 
 
-
+```java
+public void test(int i){
+    if(i == 1|| i ==2){
+        return 1;
+    }else{
+        return test(i-1)+test(i-2);
+    }
+}
+```
 
 注：数据结构视频过一下
 
@@ -152,20 +177,28 @@ CAS操作的具体过程（加分）
 
 # 其他
 
-java1.8新特性 
-
-Sleep和wait方法的区别，各自具体的用法
-
-NGINX的配置，负载均衡的策略。
-
-什么叫懒加载
-
-String底层equals方法原理 
-
-String,StringBulider,区别，list,set区别（基础非常重要）延伸问 集合线程安全相关问题 一定要准备好！！！！！
-
-单点登录业务逻辑 
+## java1.8新特性 
 
 
+
+## Sleep和wait方法的区别，各自具体的用法
+
+<https://www.cnblogs.com/loren-Yang/p/7538482.html> 
+
+## NGINX的配置，负载均衡的策略。
+
+<https://www.cnblogs.com/1214804270hacker/p/9325150.html> 
+
+## String底层equals方法原理 
+
+<https://blog.csdn.net/yygangzi/article/details/70143111> 
+
+## String,StringBulider,区别
+
+<https://blog.csdn.net/u011702479/article/details/82262823> 
+
+## 单点登录业务逻辑 
+
+<https://www.cnblogs.com/itdragon/p/8094722.html> 
 
 注：上网查找
